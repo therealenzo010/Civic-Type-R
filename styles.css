@@ -22,7 +22,8 @@ html {
 }
 
 header {
-    background-color: #222;
+    background:none;
+    box-shadow: none;
     color: white;
     text-align: center;
     padding: 20px;
@@ -31,14 +32,16 @@ header {
 }
 nav {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background: none;
+    box-shadow: none;
     padding: 10px;
     text-align: center;
     border-radius: 10px;
     border: 2px solid red;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -47,11 +50,17 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
     gap: 20px;
 }
 
+nav li {
+    display: inline-block;
+}
+
 nav ul li {
-    display: inline;
+    display: inline-block;
 }
 
 nav ul li a {
@@ -84,4 +93,21 @@ body {
     background-color: #1e3a5f;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .section {
+        padding: 10px;
+    }
 }
